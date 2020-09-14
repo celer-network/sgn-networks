@@ -61,7 +61,6 @@
     "guard": {
       "params": {
         "request_guard_count": "3",
-        "epoch_length": "60",
         "request_cost": "1000000000000000000",
         "min_dispute_timeout": "40"
       }
@@ -69,6 +68,7 @@
     "validator": {
       "params": {
         "syncer_duration": "36",
+        "epoch_length": "120",
         "mining_reward": "100000000000000000",
         "puller_reward": "1000000000000000"
       }
