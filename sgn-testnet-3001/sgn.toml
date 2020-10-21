@@ -6,6 +6,7 @@ block_delay = 5
 chain_id = 3
 gateway = "<ETHEREUM_GATEWAY_URL>"
 keystore = "<KEYSTORE_PATH>"
+min_gas_price_gwei = 10
 passphrase = "<KEYSTORE_PASSPHRASE>"
 poll_interval = 15
 
