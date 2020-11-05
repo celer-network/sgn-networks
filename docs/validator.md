@@ -76,8 +76,9 @@ Make a note of the output.
 sgncli keys add <key-name> --keyring-backend=file
 ```
 
-Repeat to create multiple transactors for the gateway. Use the **same passphrase** as the validator
-account for all accounts.
+Repeat to create multiple transactors for the gateway. You can use `<validator_name>_operator` to
+name your validator account and `<validator_name_transactor0>`, `<validator_name_transactor1>`, etc.
+to name your transactor accounts. **Use the same passphrase as the validator account for all accounts**.
 
 To get the list of accounts, run:
 
@@ -90,7 +91,7 @@ sgncli keys list --keyring-backend=file
 
 9. Prepare an Ethereum keystore JSON file for the validator, eg.:
 
-```shellscript
+```sh
 geth account new --lightkdf --keystore <path-to-keystore-folder>
 ```
 
@@ -187,17 +188,23 @@ You can tell the node is synced when new blocks show up about every 5 seconds.
 sgnops init-candidate --commission-rate <commission-rate> --min-self-stake <min-self-stake> --rate-lock-period <rate-lock-period>
 ```
 
+Wait for the transaction to complete.
+
 2. Delegate CELR to the candidate:
 
 ```sh
 sgnops delegate --candidate <candidate-eth-address> --amount <delegate-amount>
 ```
 
-3. Verify candidate status:
+3. Note that it will take some time for the existing SGN validators to sync your new validator from
+the mainchain. Afterwards, verify your validator status:
 
 ```sh
 sgncli query validator candidate <candidate-eth-address>
 ```
+
+You should be able to see that your candidate has a `delegatedStake` matching your delegated amount
+denominated in wei.
 
 4. Verify validator is in the SGN validator set:
 
@@ -205,15 +212,32 @@ sgncli query validator candidate <candidate-eth-address>
 sgncli query validator validator <validator-account-address>
 ```
 
+`<validator-account-address>` is the sgn-prefixed address you created. You should see your validator
+and its `identity` should equal to your `<candidate-eth-address>`. Make a note of the
+`consensus_pubkey` - the address prefixed with `sgnvalconspub`.
+
+If your validator doesn't appear in the query, try claiming the status manually:
+
+```sh
+sgnops claim-validator
+```
+
+If the command succeeds, wait for a while and retry they query again.
+
 5. Verify validator is in the Tendermint validator set:
 
 ```sh
 sgncli query tendermint-validator-set
 ```
 
+You should see an entry with `pub_key` matching the `consensus_pubkey` obtained in step 4.
+
+6. Go to the SGN [mainnet explorer](https://sgn.celer.network/explorer) or
+[testnet explorer](https://sgntest.celer.network/explorer) to view your validator.
+
 ## Setup gateway
 
-You can start a gateway service alongside the validator.
+Additionally, you can start a gateway service alongside the validator to serve HTTP requests.
 
 1. Prepare the SGN gateway service:
 
