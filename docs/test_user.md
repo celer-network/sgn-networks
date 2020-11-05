@@ -1,4 +1,4 @@
-# SGN Test User Manual
+# Test user manual
 
 **Note: This manual assumes familiarity with Unix command line and a basic understanding of how
 Ethereum and Celer state channels work.**
