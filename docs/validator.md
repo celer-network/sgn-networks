@@ -188,7 +188,7 @@ You can tell the node is synced when new blocks show up about every 5 seconds.
 sgnops init-candidate --commission-rate <commission-rate> --min-self-stake <min-self-stake> --rate-lock-period <rate-lock-period>
 ```
 
-Wait for the transaction to complete.
+Wait for the transaction to be confirmed.
 
 2. Delegate CELR to the candidate:
 
@@ -284,3 +284,32 @@ WantedBy=multi-user.target
 sudo systemctl enable sgn-gateway.service
 sudo systemctl start sgn-gateway.service
 ```
+
+## Withdraw stake and unbond
+
+1. Initialize a withdrawal of your self-stake:
+
+```sh
+sgnops withdraw intend --candidate <candidate-eth-address> --amount <delegate-amount>
+```
+
+After the slash timeout, confirm the unbonded status and the withdrawal of your stake:
+
+```sh
+sgnops confirm-unbonded-candidate --candidate <candidate-eth-address>
+sgnops withdraw confirm --candidate <candidate-eth-address>
+```
+
+Each command will take a while for the transactions to be confirmed.
+
+## Reset local database
+
+1. In case the local state of your validator is corrupted, you can try resetting the state by
+running:
+
+```sh
+sgnd unsafe-reset-all
+```
+
+Normally this shouldn't be necessary. Please contact us on [Discord](https://discord.gg/uGx4fjQ)
+before doing so.
