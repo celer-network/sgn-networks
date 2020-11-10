@@ -1,7 +1,7 @@
 # Validator manual
 
 **Note: This manual assumes familiarity with Unix command line and blockchain validator nodes.
-Prior experience with Cosmos SDK will be helpful.**
+Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 
 ## Prepare machine and install dependencies
 
