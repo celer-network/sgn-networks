@@ -1,7 +1,13 @@
-# Validator manual
+# Validator Manual
 
 **Note: This manual assumes familiarity with Unix command line and blockchain validator nodes.
 Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
+
+- [Prepare machine and install dependencies](#prepare-machine-and-install-dependencies)
+- [Setup binary, config and accounts](#setup-binary-config-and-accounts)
+- [Run validator with systemd](#run-validator-with-systemd)
+- [Claim validator status](#claim-validator-status)
+- [Setup gateway](#setup-gateway)
 
 ## Prepare machine and install dependencies
 
