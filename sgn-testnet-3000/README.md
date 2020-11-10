@@ -1,8 +1,8 @@
-# SGN Testnet 3000
+## SGN Testnet 3000
 
 sgn-testnet-3000 runs SGN v0.2.4.
 
-## Genesis hash
+### Genesis hash
 
 ```shellscript
 sha256sum genesis.json
