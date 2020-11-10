@@ -4,4 +4,4 @@ Celer State Guardian Network (SGN) [operational instructions](./docs/), genesis 
 
 Current running networks:
 - Mainnet: [sgn-1](./sgn-1/)
-- Testnet: [sgn-testnet-3001](./sgn-testnet-3001/))
+- Testnet: [sgn-testnet-3001](./sgn-testnet-3001/)

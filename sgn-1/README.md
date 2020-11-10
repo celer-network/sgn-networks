@@ -1,4 +1,4 @@
-## SGN Mainnet 1
+## SGN 1 (Mainnet)
 
 sgn-1 runs SGN v0.2.5.
 
