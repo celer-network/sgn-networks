@@ -17,3 +17,14 @@ sha256sum genesis.json
 
 - [DPoS contract](https://ropsten.etherscan.io/address/0x92d1f7266464b6a22f0e0749a310bf97b168e7e0)
 - [SGN contract](https://ropsten.etherscan.io/address/0xbbf421bb74fda247fa692f7d3f26b22dfd8b08a3)
+
+### Selected parameters
+
+- `Validator whitelist: enabled.` Need to get whitelisted in order to claim validator on mainchain.
+- `Slash executiion: disabled.` Slash events are logged but not executed.
+- `Reward distribution: enabled.`
+- `Minimal validator staking pool size: 10,000 CELR.`
+- `Slash timeout: 100.` The mainchain locking block time for funds to be potentially slashed.
+- `Maximum validator number: 11.`
+
+Full mainchain and sidechain states and parameters can be queried through the [mainchain contract](https://ropsten.etherscan.io/address/0x92d1f7266464b6a22f0e0749a310bf97b168e7e0#readContract) and the sidechain validator CLI.
