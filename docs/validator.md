@@ -11,7 +11,7 @@ Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 - [Setup gateway](#setup-gateway)
 - [Other operations: withdraw stake, unbond, etc.](#other-operations-withdraw-stake-unbond-etc)
 
-If you only want to run a standby unbonded validator node to sync the blocks and query sidechain information, you can stop after the section [run validator with systemd](#run-validator-with-systemd).
+If you only want to run a standby unbonded node to sync the blocks and query sidechain information, stop after the section [run validator with systemd](#run-validator-with-systemd).
 
 ## Prepare machine and install dependencies
 
