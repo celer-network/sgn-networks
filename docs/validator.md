@@ -3,11 +3,14 @@
 **Note: This manual assumes familiarity with Unix command line and blockchain validator nodes.
 Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 
+## Table of Contents
 - [Prepare machine and install dependencies](#prepare-machine-and-install-dependencies)
 - [Setup binary, config and accounts](#setup-binary-config-and-accounts)
 - [Run validator with systemd](#run-validator-with-systemd)
 - [Claim validator status](#claim-validator-status)
 - [Setup gateway](#setup-gateway)
+
+If you only want to run a standby unbonded validator node to sync the blocks and query sidechain information, you can stop after the section [run validator with systemd](#run-validator-with-systemd).
 
 ## Prepare machine and install dependencies
 
@@ -291,7 +294,7 @@ sudo systemctl enable sgn-gateway.service
 sudo systemctl start sgn-gateway.service
 ```
 
-## Withdraw stake and unbond
+## Other operations: withdraw stake, unbond, etc.
 
 1. Initialize a withdrawal of your self-stake:
 
@@ -299,14 +302,20 @@ sudo systemctl start sgn-gateway.service
 sgnops withdraw intend --candidate <candidate-eth-address> --amount <delegate-amount>
 ```
 
-After the slash timeout, confirm the unbonded status and the withdrawal of your stake:
+If the self-delegated stake after the withdrawal is below your `min-self-stake` amout, the validator will transit to `unbonding` status.
 
+2. After the slash timeout, confirm the withdrawal of your stake:
 ```sh
-sgnops confirm-unbonded-candidate --candidate <candidate-eth-address>
 sgnops withdraw confirm --candidate <candidate-eth-address>
 ```
+If your validator is in unbonding status, also confirm it to become unbonded.
+```sh
+sgnops confirm-unbonded-candidate --candidate <candidate-eth-address>
+```
 
-Each command will take a while for the transactions to be confirmed.
+Each command will take a while for the Ethereum transactions to be confirmed.
+
+3. Try `sgnops --help` and `sgncli --help` to learn more about other operations.
 
 ## Reset local database
 
