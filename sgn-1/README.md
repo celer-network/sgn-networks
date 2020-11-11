@@ -27,4 +27,4 @@ sha256sum genesis.json
 - `Slash timeout: 100.` The mainchain locking block time for funds to be potentially slashed.
 - `Maximum validator number: 11.`
 
-Full mainchain and sidechain states and parameters can be queried through [the mainchain contract](https://etherscan.io/address/0x5216db4d4cb22d1ba38866867c38d8e862974e82#readContract) and the sidechain validator CLI.
+Full mainchain and sidechain states and parameters can be queried through the [mainchain contract](https://etherscan.io/address/0x5216db4d4cb22d1ba38866867c38d8e862974e82#readContract) and the sidechain validator CLI.
