@@ -247,7 +247,7 @@ You should see an entry with `pub_key` matching the `consensus_pubkey` obtained 
 
 ## Setup gateway
 
-Additionally, you can start a gateway service alongside the validator to serve HTTP requests.
+Optionally, you can start a gateway service alongside the validator to serve HTTP requests.
 
 1. Prepare the SGN gateway service:
 
