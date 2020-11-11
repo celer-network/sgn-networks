@@ -2,7 +2,7 @@
 
 **Note: This manual assumes familiarity with Ethereum transactions using MetaMask.**
 
-All delegator operations can be done through the SGN web portal([mainnet](sgn.celer.network), [testnet](sgntest.celer.network)). If using testnet, switch to Ropsten on MetaMask.
+All delegator operations can be done through the SGN web portal([mainnet](https://sgn.celer.network), [testnet](https://sgntest.celer.network)). If using testnet, switch to Ropsten on MetaMask.
 
 You can see a list of validators and their status on the homepage. More information of a validator can be found once you click its address.
 
