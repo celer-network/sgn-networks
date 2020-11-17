@@ -32,10 +32,11 @@ cd <network-chain-id>
 geth account new --lightkdf --keystore <path-to-keystore-folder>
 ```
 
-6. For testnet, join our [Discord](https://discord.gg/uGx4fjQ)
-server and ping us to obtain some Ropsten mock CELR tokens. You should also obtain a few Ropsten
-ETH from places like the MetaMask [faucet](https://faucet.metamask.io). For mainnet, prepare your
-own CELR and ETH.
+6. For testnet, obtain some Ropsten ETH from places like the MetaMask
+[faucet](https://faucet.metamask.io). Buy Ropsten mock CELR tokens on the
+[Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0xb37f671dfc6c7c03462c76313ec1a35b0c0a76d5).
+
+For mainnet, prepare your own CELR and ETH.
 
 7. Send CELR and ETH to `peer0` and `peer1`. Make sure `peer0` has at least 1 CELR. You can import
 the keystore JSON files into MetaMask for ease of use.

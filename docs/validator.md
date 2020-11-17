@@ -107,9 +107,13 @@ geth account new --lightkdf --keystore <path-to-keystore-folder>
 
 Save it as `$HOME/.sgncli/eth_ks.json`.
 
-10. For testnet, join our [Discord](https://discord.gg/uGx4fjQ) server and ping us to obtain some
-Ropsten mock CELR tokens. You should also obtain a few Ropsten ETH from places like the MetaMask
-[faucet](https://faucet.metamask.io).
+10. For testnet, obtain some Ropsten ETH from places like the MetaMask
+[faucet](https://faucet.metamask.io). Buy Ropsten mock CELR tokens on the
+[Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0xb37f671dfc6c7c03462c76313ec1a35b0c0a76d5).
+If there is not enough CELR in the Uniswap pool, join our [Discord](https://discord.gg/uGx4fjQ)
+server and ping us.
+
+For mainnet, currently we have not opened validator spots. Please stay tuned for more information.
 
 11. Send ETH and CELR to the validator ETH address. Make sure it has enough CELR for self-staking
 and a few ETH for gas.
