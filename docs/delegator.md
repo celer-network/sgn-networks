@@ -12,7 +12,7 @@ You can see a list of validators and their status on the homepage. More validato
 
 1. Approve CELR to the DPoS contract through the **`Approve CELR`** button at the lower-left corner. The value should be no less than the total amount you plan to delegate to the validators. The ERC20 allowance is updated at the upper-left corner.
 
-2. Once clicked into a validator, you can delegate through **`Actions -> Delegate`** at the upper-right corner of the page. The minimal staking amount per operation is 1 CELR.
+2. Once clicked into a validator, you can delegate through **`Actions -> Delegate`** at the upper-right corner of the page. The minimal staking amount per operation is 1 CELR. Information in the `Delegators` list on the page will be updated a few minutes after the tx is submitted, as the sidechain validators need time to sync the mainchain updates into sidechain blocks.
 
 ## Withdraw stake
 
