@@ -10,14 +10,13 @@ You can see a list of validators and their status on the homepage. More validato
 
 ## Delegate stake
 
-1. Approve CELR to the DPoS contract through the **`Approve CELR`** button at the lower-left corner. The value should be no less than the total CELR amount you plan to delegate to the validators. The allowance amount will be updated at the upper-left corner after the transaction is confirmed.
+1. Approve CELR to the DPoS contract through the **`Approve CELR`** button at the lower-left corner. The value should be no less than the total amount you plan to delegate to the validators. The ERC20 allowance is updated at the upper-left corner.
 
 2. Once clicked into a validator, you can see an **`Actions`** button at the upper-right corner. Delegate through **`Actions -> Delegate`**. The minimal staking amount per operation is 1 CELR.
 
 ## Withdraw stake
 
-1. Input the amount of stake to withdraw through **`Actions -> Initialize Withdraw`** within a validator
-page. The minimal withdrawal amount per operation is 1 CELR.
+1. Within a validator page, input the amount to withdraw through **`Actions -> Initialize Withdraw`**. The minimal withdrawal amount per operation is 1 CELR.
 
 2. Confirm your withdrawal through **`Actions -> Confirm Withdraw`** after the mainchain `slashTimeout`
 (currently 100 ETH block, approximately 30 minutes)
