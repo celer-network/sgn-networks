@@ -1,6 +1,6 @@
 ## SGN 1 (Mainnet)
 
-sgn-1 runs SGN v0.2.5.
+sgn-1 runs SGN v0.2.6.
 
 ### Genesis hash
 
@@ -21,7 +21,7 @@ sha256sum genesis.json
 ### Selected parameters
 
 - `Validator whitelist: enabled.` Need to get whitelisted in order to claim validator on mainchain.
-- `Slash executiion: disabled.` Slash events are logged but not executed.
+- `Slash execution: disabled.` Slash events are logged but not executed.
 - `Reward distribution: disabled.`
 - `Minimal validator staking pool size: 100,000 CELR.`
 - `Slash timeout: 100.` The mainchain locking block time for funds to be potentially slashed.
