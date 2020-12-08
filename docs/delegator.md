@@ -10,7 +10,7 @@ You can see a list of validators and their status on the homepage. More validato
 
 ## Delegate stake
 
-Delegation needs one Ethereum mainchain transaction, assuming enough enough ERC20 allowance has been approved to the DPoS contract.
+Delegation needs one Ethereum mainchain transaction, assuming enough ERC20 allowance has been approved to the DPoS contract.
 
 1. Approve CELR to the DPoS contract through the **`Approve CELR`** button at the lower-left corner. The value should be no less than the total amount you plan to delegate to the validators. The ERC20 allowance is updated at the upper-left corner. 
    
