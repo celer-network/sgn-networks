@@ -202,13 +202,15 @@ You can tell the node is synced when new blocks show up about every 5 seconds.
 sgnops init-candidate --commission-rate <commission-rate> --min-self-stake <min-self-stake> --rate-lock-period <rate-lock-period>
 ```
 
-Wait for the transaction to be confirmed.
+Wait for the transaction to be confirmed. Refer to the [CLI doc](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops_init-candidate.md) and [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#become-a-validator) for more details. Note that `rateLockPeriod + currentBlockNum = rateLockEndTime`
 
 2. Delegate CELR to the candidate:
 
 ```sh
 sgnops delegate --candidate <candidate-eth-address> --amount <delegate-amount>
 ```
+
+Wait for the transaction to be confirmed. Refer to the [CLI doc](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops_delegate.md) and [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#delegate-stake) for more details.
 
 3. Note that it will take some time for the existing SGN validators to sync your new validator from
 the mainchain. Afterwards, verify your validator status:
@@ -300,6 +302,8 @@ sudo systemctl start sgn-gateway.service
 ```
 
 ## Other operations: withdraw stake, unbond, etc.
+
+Please refer to the [CLI doc](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops_withdraw.md) and [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#withdraw-stake) for more details on the withdrawal process.
 
 1. Initialize a withdrawal of your self-stake:
 
