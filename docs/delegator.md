@@ -12,7 +12,7 @@ You can see a list of validators and their status on the homepage. More validato
 
 Delegation needs one Ethereum mainchain transaction, assuming enough ERC20 allowance has been approved to the DPoS contract.
 
-Once clicked into a validator, you can delegate through **`Delegate`** at the upper-right corner of the page. The minimal staking amount per operation is 1 CELR. Information in the `Delegators` list on the page will be updated a few minutes after the tx is submitted, as the sidechain validators need some time to sync the mainchain updates to sidechain.
+Once clicked into a validator, you can delegate through **`Delegate`** at the upper-right corner of the page. The minimal staking amount per operation is 1 CELR. Information in the `Delegators` list on the page will be updated a few minutes after the tx is submitted, as the sidechain validators need some time to sync the mainchain updates to sidechain. You can also view your delegator info in the mainchain DPoS contract through the `Contract Reader` tab.
 
 If you are delegating for the first time or do not have enough ERC20 allowance, an ERC20 approval transaction to the DPoS contract will be triggered before the delegation transaction. The default approval amount is unlimited, which can be adjusted in MetaMask before you confirm the transaction.
 
