@@ -22,7 +22,7 @@ Withdrawal from a bonded or unbonding validator requires two Ethereum mainchain 
 
 1. Within a validator page, input the amount to withdraw through **`Initialize Withdraw`**. The minimal withdrawal amount per operation is 1 CELR. 
 
-    After the transaction is mined on Ethereum, the delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in DPoS contract from the `Contract Reader` tab.  
+    After the transaction is mined on Ethereum, your delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in the DPoS contract from the `Contract Reader` tab.  
 
 2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout`
 (currently 100 ETH block, approximately 30 minutes)
