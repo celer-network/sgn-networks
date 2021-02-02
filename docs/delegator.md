@@ -24,7 +24,7 @@ Withdrawal from a bonded or unbonding validator requires two Ethereum mainchain 
 
     After the transaction is mined on Ethereum, your delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in the DPoS contract from the `Contract Reader` tab.  
 
-2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout` (can be queried in the `Contract Reader` tab, currently 43200 ETH block, approximately 1 week)
+2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout` (can be queried in the `Contract Reader` tab, **currently 43200 ETH block, approximately 1 week**)
 
     Check your delegator info in the DPoS contract from the `Contract Reader` tab, and only submit `Confirm Withdraw` if there is undelegating stake.
 
