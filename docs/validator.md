@@ -251,6 +251,12 @@ You should see an entry with `pub_key` matching the `consensus_pubkey` obtained 
 6. Go to the SGN [mainnet explorer](https://sgn.celer.network/explorer) or
 [testnet explorer](https://sgntest.celer.network/explorer) to view your validator.
 
+7. Update validator public contact info:
+
+```sh
+sgncli tx validator edit-candidate-description --contact [email address] --website [entity website]
+```
+
 ## Setup gateway
 
 Optionally, you can start a gateway service alongside the validator to serve HTTP requests.
