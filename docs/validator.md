@@ -242,13 +242,13 @@ If `Status = 0` (unbonded), try claiming the status manually:
 sgnops claim-validator
 ```
 
-Then wait for a while if the command succeeds and retry they query again.
-
 If `Status = 1` (bonded), try triggering the sidechain info sync manually:
 
 ```sh
 sgnops sync sync-validator --candidate <candidate-eth-address>
 ```
+
+Then wait for a while and retry the query again.
 
 5. Verify validator is in the Tendermint validator set:
 
