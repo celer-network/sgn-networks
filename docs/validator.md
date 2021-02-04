@@ -232,13 +232,23 @@ sgncli query validator validator <validator-account-address>
 and its `identity` should equal to your `<candidate-eth-address>`. Make a note of the
 `consensus_pubkey` - the address prefixed with `sgnvalconspub`.
 
-If your validator doesn't appear in the query, try claiming the status manually:
+If your validator doesn't appear in the query, check the candidate status on mainchain through
+```sh
+sgnops get-candidate-info --candidate <candidate-eth-address>
+```
+If `Status = 0` (unbonded), try claiming the status manually:
 
 ```sh
 sgnops claim-validator
 ```
 
-If the command succeeds, wait for a while and retry they query again.
+If `Status = 1` (bonded), try triggering the sidechain info sync manually:
+
+```sh
+sgnops sync sync-validator --candidate <candidate-eth-address>
+```
+
+Then wait for a while and retry the query again.
 
 5. Verify validator is in the Tendermint validator set:
 
