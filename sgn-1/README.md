@@ -27,4 +27,6 @@ sha256sum genesis.json
 - `Slash timeout: 43200.` The mainchain locking block time for funds to be potentially slashed.
 - `Maximum validator number: 11.`
 
+- Reward per sidechain block (~5 sec): 23,782,343,987,823,439,878 CELR (150M CELR / year)
+
 Full mainchain and sidechain states and parameters can be queried through the [mainchain contract](https://etherscan.io/address/0x5216db4d4cb22d1ba38866867c38d8e862974e82#readContract) and the sidechain validator CLI.
