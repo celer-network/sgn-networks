@@ -320,6 +320,7 @@ sudo systemctl start sgn-gateway.service
 ```
 
 ## Withdraw stakes / Unbond validator
+Please refer to the [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#withdraw-stake) for better understanding of the stake withdrawal process.
 
 1. Initialize a withdrawal of your self-delegated stake:
 ```sh
@@ -337,6 +338,7 @@ sgnops confirm-unbonded-candidate --candidate <candidate-eth-address>
 ```
 
 ## Withdraw rewards
+Please refer to the [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#reward) for better understanding of the reward withdrawal process.
 
 1. Initialize withdrawal of rewards at sidechain:
 ```sh
@@ -348,16 +350,14 @@ sgncli tx validator withdraw-reward <self-eth-address>
 sgncli query validator reward <self-eth-address>
 ```
 
-3. After new reward message is signed with signer stakes greater than quorum stakes, submit the message to ETH mainchain to withdraw rewards:
+3. After new reward message is signed with signer stakes greater than quorum stakes, submit the message to mainchain:
 ```sh
 sgnops withdraw reward
 ```
 
 ## Other operations
 
-Please refer to the [CLI doc](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops_withdraw.md) and [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#withdraw-stake) for more details on the withdrawal process.
-
-Try `sgnops --help` and `sgncli --help` to learn more about other operations.
+Please refer to the CLI docs of [sgnops](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops.md) and [sgncli](https://github.com/celer-network/sgn/blob/master/docs/sgncli/sgncli.md), or try `sgnops --help` and `sgncli --help` to learn more about other operations.
 
 ## Reset local database
 
