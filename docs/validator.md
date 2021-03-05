@@ -9,7 +9,9 @@ Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 - [Run validator with systemd](#run-validator-with-systemd)
 - [Claim validator status](#claim-validator-status)
 - [Setup gateway](#setup-gateway)
-- [Other operations: withdraw stake, unbond, etc.](#other-operations-withdraw-stake-unbond-etc)
+- [Withdraw stakes / Unbond validator](#withdraw-stakes--unbond-validator)
+- [Withdraw rewards](#withdraw-rewards)
+- [Other operations](#other-operations)
 
 If you only want to run a standby unbonded node to sync the blocks and query sidechain information, stop after [run validator with systemd](#run-validator-with-systemd).
 
@@ -317,16 +319,13 @@ sudo systemctl enable sgn-gateway.service
 sudo systemctl start sgn-gateway.service
 ```
 
-## Other operations: withdraw stake, unbond, etc.
+## Withdraw stakes / Unbond validator
+Please refer to the [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#withdraw-stake) for better understanding of the stake withdrawal process.
 
-Please refer to the [CLI doc](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops_withdraw.md) and [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#withdraw-stake) for more details on the withdrawal process.
-
-1. Initialize a withdrawal of your self-stake:
-
+1. Initialize a withdrawal of your self-delegated stake:
 ```sh
 sgnops withdraw intend --candidate <candidate-eth-address> --amount <delegate-amount>
 ```
-
 If the self-delegated stake after the withdrawal is below your `min-self-stake` amout, the validator will transit to `unbonding` status.
 
 2. After the slash timeout, confirm the withdrawal of your stake:
@@ -338,13 +337,31 @@ If your validator is in unbonding status, also confirm it to become unbonded.
 sgnops confirm-unbonded-candidate --candidate <candidate-eth-address>
 ```
 
-Each command will take a while for the Ethereum transactions to be confirmed.
+## Withdraw rewards
+Please refer to the [design doc](https://www.celer.network/docs/celercore/sgn/architecture.html#reward) for better understanding of the reward withdrawal process.
 
-3. Try `sgnops --help` and `sgncli --help` to learn more about other operations.
+1. Initialize withdrawal of rewards at sidechain:
+```sh
+sgncli tx validator withdraw-reward <self-eth-address>
+```
+
+2. Wait for the validators to co-sign the reward message, and query the reward message at sidechain:
+```sh
+sgncli query validator reward <self-eth-address>
+```
+
+3. After new reward message is signed with signer stakes greater than quorum stakes, submit the message to mainchain:
+```sh
+sgnops withdraw reward
+```
+
+## Other operations
+
+Please refer to the CLI docs of [sgnops](https://github.com/celer-network/sgn/blob/master/docs/sgnops/sgnops.md) and [sgncli](https://github.com/celer-network/sgn/blob/master/docs/sgncli/sgncli.md), or try `sgnops --help` and `sgncli --help` to learn more about other operations.
 
 ## Reset local database
 
-1. In case the local state of your validator is corrupted, you can try resetting the state by
+In case the local state of your validator is corrupted, you can try resetting the state by
 running:
 
 ```sh
