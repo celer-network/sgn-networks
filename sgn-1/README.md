@@ -1,6 +1,6 @@
 ## SGN 1 (Mainnet)
 
-sgn-1 runs SGN v0.2.6.
+sgn-1 runs SGN v0.2.7.
 
 ### Genesis hash
 
