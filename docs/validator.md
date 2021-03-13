@@ -17,7 +17,7 @@ If you only want to run a standby unbonded node to sync the blocks and query sid
 
 ## Prepare machine and install dependencies
 
-1. Prepare a Linux machine with a minimum of 1GB RAM (2GB recommended), at least 2 cores and at
+1. Prepare a Linux machine with a minimum of 4GB RAM (8GB recommended), at least 2 cores and at
 least 100GB of disk space. We assume Ubuntu in this manual but most Linux distros should work.
 
 2. Install go (version 1.14+), gcc, make, git and libleveldb-dev.
