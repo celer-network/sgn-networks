@@ -1,4 +1,4 @@
-## SGN Testnet 3001
+## (DEPRECATED) SGN Testnet 3001
 
 sgn-testnet-3001 runs SGN v0.2.6.
 

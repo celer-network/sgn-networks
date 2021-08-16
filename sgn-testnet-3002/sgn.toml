@@ -1,0 +1,46 @@
+# SGN-specific configs
+
+[eth]
+add_gas_price_gwei = 1
+block_delay = 5
+chain_id = 3
+gateway = "<ETHEREUM_GATEWAY_URL>"
+keystore = "<KEYSTORE_PATH>"
+min_gas_price_gwei = 5
+passphrase = "<KEYSTORE_PASSPHRASE>"
+poll_interval = 15
+
+[eth.check_interval]
+add_subscription_balance = 5
+candidate_unbonded = 3
+confirm_param_proposal = 20
+intend_settle = 5
+intend_withdraw_channel = 5
+update_commission_rate = 20
+update_delegated_stake = 2
+update_sidechain_addr = 3
+validator_change = 3
+
+[eth.contracts]
+celr_address = "0x38e63080C53b788Ee8e126c198696D22Fbf483A8"
+dpos_address = "0xBC31fA28E01CAB33a9bcD7b30A7C6291479e47c4"
+ledger_address = "0x4ee1DC9868c295e145334709Ce857534e9B962F8"
+sgn_address = "0x7C079d6d889A27ac597F1520168F663523c59FB4"
+
+
+[log]
+color = false
+level = "debug"
+
+[sgn]
+base_gas_price = 0
+chain_id = "sgn-testnet-3002"
+execute_slash = false
+gas_adjustment = 1.5
+keyring_backend = "file"
+node_uri = "tcp://localhost:26657"
+passphrase = "<VALIDATOR_ACCOUNT_PASSPHRASE>"
+pubkey = "<VALIDATOR_PUBKEY>"
+timeout_commit = 5
+transactors = ["<TRANSACTOR_ADDRESSES>"]
+validator_account = "<VALIDATOR_ACCOUNT_ADDRESS>"
