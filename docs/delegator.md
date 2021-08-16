@@ -2,9 +2,9 @@
 
 **Note: This manual assumes familiarity with Ethereum transactions using MetaMask.**
 
-All delegator operations can be done through the SGN web portal ([mainnet](https://sgn.celer.network), [testnet](https://sgntest.celer.network)). 
+All delegator operations can be done through the SGN web portal ([mainnet](https://sgn.celer.network), [testnet](https://sgntest.celer.network)).
 
-If using testnet, switch to Ropsten on MetaMask. Ropsten mock CELR tokens for the testnet can be obtained on the [Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0xb37f671dfc6c7c03462c76313ec1a35b0c0a76d5). Ropsten ETH can be obtained from places like the [MetaMask faucet](https://faucet.metamask.io).
+If using testnet, switch to Ropsten on MetaMask. Ropsten mock CELR tokens for the testnet can be obtained on the [Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x38e63080C53b788Ee8e126c198696D22Fbf483A8). Ropsten ETH can be obtained from places like the [MetaMask faucet](https://faucet.metamask.io).
 
 You can see a list of validators and their status on the homepage. More validator information can be found once you click its address.
 
@@ -20,9 +20,9 @@ If you are delegating for the first time or do not have enough ERC20 allowance, 
 
 Withdrawal from a bonded or unbonding validator requires two Ethereum mainchain transactions.
 
-1. Within a validator page, input the amount to withdraw through **`Initialize Withdraw`**. The minimal withdrawal amount per operation is 1 CELR. 
+1. Within a validator page, input the amount to withdraw through **`Initialize Withdraw`**. The minimal withdrawal amount per operation is 1 CELR.
 
-    After the transaction is mined on Ethereum, your delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in the DPoS contract from the `Contract Reader` tab.  
+    After the transaction is mined on Ethereum, your delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in the DPoS contract from the `Contract Reader` tab.
 
 2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout`. The timeout value can be queried in the `Contract Reader` tab, currently 43200 ETH block (approximately 1 week) on mainnet, 100 Ropsten block on testnet.
 

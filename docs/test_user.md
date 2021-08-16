@@ -34,7 +34,7 @@ geth account new --lightkdf --keystore <path-to-keystore-folder>
 
 6. For testnet, obtain some Ropsten ETH from places like the MetaMask
 [faucet](https://faucet.metamask.io). Buy Ropsten mock CELR tokens on the
-[Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0xb37f671dfc6c7c03462c76313ec1a35b0c0a76d5).
+[Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x38e63080C53b788Ee8e126c198696D22Fbf483A8).
 
 For mainnet, prepare your own CELR and ETH.
 
