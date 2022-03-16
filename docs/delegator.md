@@ -4,8 +4,6 @@
 
 All delegator operations can be done through the [SGN web portal](https://sgn-v1.celer.network).
 
-If using testnet, switch to Ropsten on MetaMask. Ropsten mock CELR tokens for the testnet can be obtained on the [Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x38e63080C53b788Ee8e126c198696D22Fbf483A8). Ropsten ETH can be obtained from places like the [MetaMask faucet](https://faucet.metamask.io).
-
 You can see a list of validators and their status on the homepage. More validator information can be found once you click its address.
 
 ## Delegate stake
@@ -24,7 +22,7 @@ Withdrawal from a bonded or unbonding validator requires two Ethereum mainchain 
 
     After the transaction is mined on Ethereum, your delegator amount will be deducted in the delegators list. You can check your undelegating stakes and pending withdrawals in the DPoS contract from the `Contract Reader` tab.
 
-2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout`. The timeout value can be queried in the `Contract Reader` tab, currently 43200 ETH block (approximately 1 week) on mainnet, 100 Ropsten block on testnet.
+2. Confirm your withdrawal through **`Confirm Withdraw`** after the mainchain `slashTimeout`. The timeout value can be queried in the `Contract Reader` tab, currently 0 ETH block on mainnet.
 
     Check your delegator info in the DPoS contract from the `Contract Reader` tab, and only submit `Confirm Withdraw` if there is undelegating stake and the current ETH block has passed the `intent block + slash timeout`.
 
