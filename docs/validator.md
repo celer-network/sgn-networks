@@ -260,8 +260,7 @@ sgncli query tendermint-validator-set
 
 You should see an entry with `pub_key` matching the `consensus_pubkey` obtained in step 4.
 
-6. Go to the SGN [mainnet explorer](https://sgn.celer.network/explorer) or
-[testnet explorer](https://sgntest.celer.network/explorer) to view your validator.
+6. Go to the SGN [mainnet explorer](https://sgn-v1.celer.network/explorer) to view your validator.
 
 7. Update validator public contact info:
 

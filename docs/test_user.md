@@ -47,8 +47,7 @@ the keystore JSON files into MetaMask for ease of use.
 sgnops guard-test --config ./sgn.toml --peer0 <path-to-peer0-keystore> --peer1 <path-to-peer1-keystore> --sgn-gateway <sgn-gateway>
 ```
 
-For `sgn-gateway`, use `https://sgntest.celer.network/gateway` for testnet and
-`https://sgn.celer.network/gateway` for mainnet.
+Use `https://sgn-v1.celer.network/gateway` for the mainnet gateway.
 
 The test program will open a Celer Channel between the peers and subscribe `peer0` to the SGN. Once
 the bootstrap process is done, you will see "opened channel channel ID: <channel-id>" and "Starting

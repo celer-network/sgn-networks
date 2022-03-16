@@ -1,4 +1,4 @@
-## SGN Testnet 3002
+## (DECOMMISSIONED) SGN Testnet 3002
 
 sgn-testnet-3002 runs SGN v0.2.7.
 
@@ -8,10 +8,6 @@ sgn-testnet-3002 runs SGN v0.2.7.
 sha256sum genesis.json
 3d945ac09aeaf5b51effc21bb0297cfcb7841d762b1ab0cb83bf514d5bef7b57  genesis.json
 ```
-
-### Web portal
-
-- [sgntest.celer.network](https://sgntest.celer.network/)
 
 ### Ropsten contracts
 

@@ -11,7 +11,7 @@ sha256sum genesis.json
 
 ### Web portal
 
-- [sgn.celer.network](https://sgn.celer.network/)
+- [sgn-v1.celer.network](https://sgn-v1.celer.network/)
 
 ### Ethereum contracts
 

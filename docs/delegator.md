@@ -2,7 +2,7 @@
 
 **Note: This manual assumes familiarity with Ethereum transactions using MetaMask.**
 
-All delegator operations can be done through the SGN web portal ([mainnet](https://sgn.celer.network), [testnet](https://sgntest.celer.network)).
+All delegator operations can be done through the [SGN web portal](https://sgn-v1.celer.network).
 
 If using testnet, switch to Ropsten on MetaMask. Ropsten mock CELR tokens for the testnet can be obtained on the [Ropsten Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x38e63080C53b788Ee8e126c198696D22Fbf483A8). Ropsten ETH can be obtained from places like the [MetaMask faucet](https://faucet.metamask.io).
 

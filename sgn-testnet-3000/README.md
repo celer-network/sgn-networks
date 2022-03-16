@@ -1,4 +1,4 @@
-## (DEPRECATED) SGN Testnet 3000
+## (DECOMMISSIONED) SGN Testnet 3000
 
 sgn-testnet-3000 runs SGN v0.2.4.
 
